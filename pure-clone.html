@@ -1,121 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
 
-  <script defer>
-    const scrollFunction = () => {
-      const nav = document.querySelector('nav')
-      document.body.scrollTop > 50|| document.documentElement.scrollTop > 50 ? 
-      nav.style.height = '50px' : 
-      nav.style.height = '80px'
-    }
-    window.onscroll = () => scrollFunction()
-  </script>
+    <script defer>
+      const scrollFunction = () => {
+        const nav = document.querySelector("nav")
+        document.body.scrollTop > 50 || document.documentElement.scrollTop > 50
+          ? (nav.style.height = "50px")
+          : (nav.style.height = "80px")
+      }
+      window.onscroll = () => scrollFunction()
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      font-size: 14px;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      height: 200vh;
-    }
-    nav {
-      box-shadow: 0 8px 24px rgb(0 0 0 / 15%);
+      function searchFunction() {
+        const target1 = document.querySelector(".nav-items")
+        const target2 = document.querySelector(".get-pricing-btn")
+        const target3 = document.querySelector(".search-here-input")
+        const target4 = document.querySelector(".exit-search")
+        target1.style.display = 'none'
+        target2.style.display = 'none'
+        target3.style.display = 'inline'
+        target4.style.display = 'inline'
+      }
 
-      display: flex;
-      justify-content: center;
+      function exitSearch() {
+        const target1 = document.querySelector(".nav-items")
+        const target2 = document.querySelector(".get-pricing-btn")
+        const target3 = document.querySelector(".search-here-input")
+        const target4 = document.querySelector(".exit-search")
+        target1.style.display = 'flex'
+        target2.style.display = 'inline'
+        target3.style.display = 'none'
+        target4.style.display = 'none'
+      }
+    </script>
 
-      position: fixed;
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        font-family: "Inter", sans-serif;
+      }
+      body {
+        height: 200vh;
+      }
+      nav {
+        box-shadow: 0 8px 24px rgb(0 0 0 / 15%);
 
-      transition: all 0.2s ease;
+        display: flex;
+        justify-content: center;
 
-      /* padding-left: .5em; */
-      width: 100%;
-      height: 80px;
-    }
-    .nav-inner-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+        position: fixed;
 
-      width: 70vw;
-    }
-    .nav-inner-wrapper img {
-      width: 150px;
-    }
-    .nav-items {
-      color: #919191;
-      cursor: pointer;
-      display: flex;
-      padding: 0 10px;
-    }
+        transition: all 0.2s ease;
 
-    .nav-items span {
-      padding: 0 10px;
-    }
+        /* padding-left: .5em; */
+        width: 100%;
+        height: 80px;
+      }
+      .nav-inner-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-    .search-icon {
-      color: #292929;
-    }
+        width: 70vw;
+      }
+      .nav-inner-wrapper img {
+        width: 150px;
+      }
+      .nav-items {
+        color: #919191;
+        cursor: pointer;
+        display: flex;
+        padding: 0 10px;
+      }
 
-    .get-pricing-btn {
-      background: linear-gradient(214.77deg,#feb804 -27.58%,#fe5000 100%);
-      border: 1px solid transparent;
-      color: white;
-      cursor: pointer;
-      margin-left: 21.5px;
-      padding: 12px 19px;
-    }
+      .nav-items span {
+        padding: 0 10px;
+      }
 
-    .get-pricing-btn:hover {
-      background: white;
-      border: 1px solid #fe5000;
-      color: #fe5000;
-    }
-  </style>
+      .nav-nav-end-buttons {
+        display: flex;
+      }
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
-</head>
-<body>
-  <nav>
-    <div class="nav-inner-wrapper">
-      <a href="#">
-        <img src="./images/pure-logo.svg.imgo.svg" alt="Pure Logo">
-      </a>
+      .search-icon {
+        color: #292929;
+        cursor: pointer;
+      }
 
-      <div class="nav-items">
-        <div>
-          <span>Products and Solutions</span>
+      .get-pricing-btn {
+        background: linear-gradient(214.77deg, #feb804 -27.58%, #fe5000 100%);
+        border: 1px solid transparent;
+        color: white;
+        cursor: pointer;
+        margin-left: 19px;
+        padding: 12px 21px;
+      }
+
+      .get-pricing-btn:hover {
+        background: white;
+        border: 1px solid #fe5000;
+        color: #fe5000;
+      }
+
+      .search-here-input {
+        border: 1px solid rgb(233, 233, 233);
+        border-radius: 0;
+        display: none;
+        font-size: 11px;
+        margin-left: 10px;
+        margin-right: 22px;
+        padding: 11px;
+        width: 44vw;
+      }
+
+      .exit-search {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: none;
+      }
+    </style>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-inner-wrapper">
+        <a href="#">
+          <img src="./images/pure-logo.svg.imgo.svg" alt="Pure Logo" />
+        </a>
+
+        <div class="nav-items">
+          <div>
+            <span>Products and Solutions</span>
+          </div>
+          <div>
+            <span>Why Pure</span>
+          </div>
+          <div>
+            <span>Support</span>
+          </div>
+          <div>
+            <span>About</span>
+          </div>
+          <div>
+            <span>Partners</span>
+          </div>
         </div>
-        <div>
-          <span>Why Pure</span>
-        </div>
-        <div>
-          <span>Support</span>
-        </div>
-        <div>
-          <span>About</span>
-        </div>
-        <div>
-          <span>Partners</span>
+
+        <div class="nav-end-buttons">
+          <i class="fas fa-search search-icon" onclick="searchFunction()"></i>
+          <button class="get-pricing-btn">Get Pricing</button>
+          <input type="text" class="search-here-input" placeholder="Search here">
+          <button class="exit-search" onclick="exitSearch()">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
       </div>
-
-      <div class="nav-end-buttons">
-        <i class="fas fa-search search-icon"></i>
-        <button class="get-pricing-btn">Get Pricing</button>
-      </div>
-    </div>
-  </nav>
-</body>
+    </nav>
+  </body>
 </html>
